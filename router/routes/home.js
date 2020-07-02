@@ -1,0 +1,37 @@
+export default [
+    {
+        path:'/home',
+        name:'推荐',
+        component:()=>import("../../views/home.vue")
+    },
+    {
+        path:'/beauty',
+        name:'美容美妆',
+        component:()=>import("../../components/home/beauty.vue")
+    },
+    {
+        path:'/female',
+        name:'女装',
+        component:()=>import("../../components/home/female.vue")
+    },
+    {
+        path:'/male',
+        name:'男装',
+        component:()=>import("../../components/home/male.vue")
+    },
+    {
+        path:'/underwear',
+        name:'内衣',
+        component:()=>import("../../components/home/underwear.vue")
+    },
+    {
+        path:'/shoes',
+        name:'鞋靴',
+        component:()=>import("../../components/home/shoes.vue")
+    },
+    {
+        path:'/season',
+        name:'换季',
+        component:()=>import("../../components/home/season.vue")
+    }
+]
