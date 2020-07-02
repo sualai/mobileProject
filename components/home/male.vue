@@ -1,0 +1,172 @@
+<template>
+    <div>
+        <clothing 
+        :imglist="imglist"
+        :select="select"
+        :navlist="navlist"
+        :goods="goods"
+        :color="color"
+        ></clothing>
+    </div>
+</template>
+
+<script>
+import clothing from "../public/clothing.vue"
+    export default {
+        data(){
+            return {
+                imglist:[
+                    {img:require("../../assets/images/male_bg.webp")},
+                    {img:require("../../assets/images/male_lx1.webp")},
+                    {img:require("../../assets/images/male_lx2.webp")}
+                ],
+                select:["精选好货","春季换新","品质大牌","时尚有闲"],
+                navlist:[
+                    {
+                        img:require("../../assets/images/male_nav1.webp"),
+                        name:'短袖'
+                    },
+                    {
+                        img:require("../../assets/images/male_nav2.webp"),
+                        name:'T恤'
+                    },
+                    {
+                        img:require("../../assets/images/male_nav3.webp"),
+                        name:'短裤'
+                    },
+                    {
+                        img:require("../../assets/images/male_nav4.webp"),
+                        name:'Poo衫'
+                    },
+                    {
+                        img:require("../../assets/images/male_nav5.webp"),
+                        name:'休闲裤'
+                    },
+                    {
+                        img:require("../../assets/images/male_nav6.webp"),
+                        name:'牛仔裤'
+                    },
+                    {
+                        img:require("../../assets/images/male_nav7.webp"),
+                        name:'衬衫'
+                    },
+                    {
+                        img:require("../../assets/images/male_nav8.webp"),
+                        name:'运动裤'
+                    }
+                ],
+                goods:[
+                    {
+                        id:'nan1',
+                        img:require("../../assets/images/male_list1.webp"),
+                        name:'鸿星尔克',
+                        newPrice:'84',
+                        oldPrice:230,
+                        zk:1.9,
+                    },
+                    {
+                        id:'nan2',
+                        img:require("../../assets/images/male_list2.webp"),
+                        name:'巴贝',
+                         newPrice:'99',
+                        oldPrice:390,
+                        zk:2.1,
+                    },
+                    {
+                        id:'nan3',
+                        img:require("../../assets/images/male_list3.webp"),
+                        name:'柏朗亚高',
+                        newPrice:'53',
+                        oldPrice:230,
+                        zk:3.4,
+                    },
+                    {
+                        id:'nan4',
+                        img:require("../../assets/images/male_list4.webp"),
+                        name:'FAIRY-FOX',
+                        newPrice:'89',
+                        oldPrice:199,
+                        zk:5.3,
+                    },
+                    {
+                        id:'nan5',
+                        img:require("../../assets/images/male_list5.webp"),
+                        name:'德玛纳',
+                        newPrice:119,
+                        oldPrice:369,
+                        zk:3.4,
+                    },
+                    {
+                        id:'nan6',
+                        img:require("../../assets/images/male_list6.webp"),
+                        name:'木林森',
+                        newPrice:'68',
+                        oldPrice:120,
+                        zk:2.4,
+                    },
+                    {
+                        id:'nan7',
+                        img:require("../../assets/images/male_list7.webp"),
+                        name:'LeeCooper',
+                        newPrice:'169',
+                        oldPrice:630,
+                        zk:1.4,
+                    },
+                    {
+                        id:'nan8',
+                        img:require("../../assets/images/male_list8.webp"),
+                        name:'柏朗亚高',
+                        newPrice:'79',
+                        oldPrice:149,
+                        zk:4.4,
+                    },
+                    {
+                        id:'nan9',
+                        img:require("../../assets/images/male_list10.webp"),
+                        name:'HLA海澜之家',
+                        newPrice:'119',
+                        oldPrice:680,
+                        zk:1.9,
+                    },
+                    {
+                        id:'nan10',
+                        img:require("../../assets/images/male_list9.webp"),
+                        name:'Lee Cooper',
+                        newPrice:'168',
+                        oldPrice:780,
+                        zk:4.9,
+                    },
+                    
+                    {
+                        id:'nan11',
+                        img:require("../../assets/images/male_list11.webp"),
+                        name:'LEE Cooper',
+                        newPrice:'189',
+                        oldPrice:339,
+                        zk:6.4,
+                    },
+                    {
+                        id:'nan12',
+                        img:require("../../assets/images/male_list12.webp"),
+                        name:'鸿星尔克',
+                         newPrice:234,
+                        oldPrice:930,
+                        zk:2.4,
+                    }
+                ],
+                color:'rgb(141,234,234)'
+            }
+        },
+        components:{
+            clothing
+        },
+        created() {
+            this.$store.state.showTop = false;
+            this.$store.state.showBottom = false;
+        }
+    }
+</script>
+
+<style lang="scss" scoped>
+
+</style>

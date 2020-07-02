@@ -1,0 +1,143 @@
+<template>
+    <div>
+        <clothing 
+        :imglist="imglist"
+        :select="select"
+        :navlist="navlist"
+        :goods="goods"
+        :color="color"
+        ></clothing>
+    </div>
+</template>
+
+<script>
+    import clothing from "../public/clothing.vue"
+    export default {
+        data(){
+            return {
+                imglist:[
+                    {
+                        img:require("../../assets/images/female_bg.webp")
+                    },
+                    {
+                        img:require("../../assets/images/female_lx1.webp")
+                    },
+                    {
+                        img:require("../../assets/images/female_lx2.webp")
+                    }
+                ],
+                select:["精选好货","今日大牌","大牌美裙","大牌特卖"],
+                navlist:[
+                    {
+                        img:require("../../assets/images/female_nav1.webp"),
+                        name:'连衣裙'
+                    },
+                    {
+                        img:require("../../assets/images/female_nav2.webp"),
+                        name:'T恤'
+                    },
+                    {
+                        img:require("../../assets/images/female_nav3.webp"),
+                        name:'衬衫'
+                    },
+                    {
+                        img:require("../../assets/images/female_nav4.webp"),
+                        name:'牛仔裤'
+                    },
+                    {
+                        img:require("../../assets/images/female_nav5.webp"),
+                        name:'休闲长库'
+                    },
+                    {
+                        img:require("../../assets/images/female_nav6.webp"),
+                        name:'半身裙'
+                    },
+                    {
+                        img:require("../../assets/images/female_nav7.webp"),
+                        name:'套装'
+                    },
+                    {
+                        img:require("../../assets/images/female_nav8.webp"),
+                        name:'薄款针织'
+                    }
+                ],
+                goods:[
+                    {
+                        img:require("../../assets/images/female_list1.webp"),
+                        name:'佐丹奴',
+                        price:'84'
+                    },
+                    {
+                        img:require("../../assets/images/female_list2.webp"),
+                        name:'卡帝乐鳄鱼',
+                        price:'58'
+                    },
+                    {
+                        img:require("../../assets/images/female_list3.webp"),
+                        name:'猫人',
+                        price:'49'
+                    },
+                    {
+                        img:require("../../assets/images/female_list4.webp"),
+                        name:'宝娜斯1985',
+                        price:'49'
+                    },
+                    {
+                        img:require("../../assets/images/female_list5.webp"),
+                        name:'德玛纳',
+                        price:'54'
+                    },
+                    {
+                        img:require("../../assets/images/female_list6.webp"),
+                        name:'卡帝乐鳄鱼',
+                        price:'84'
+                    },
+                    {
+                        img:require("../../assets/images/female_list7.webp"),
+                        name:'卡帝乐鳄鱼',
+                        price:'79'
+                    },
+                    {
+                        img:require("../../assets/images/female_list8.webp"),
+                        name:'皓顿',
+                        price:'68'
+                    },
+                    {
+                        img:require("../../assets/images/female_list9.webp"),
+                        name:'南极人',
+                        price:'49'
+                    },
+                    {
+                        img:require("../../assets/images/female_list10.webp"),
+                        name:'米可芭纳',
+                        price:'46'
+                    },
+                    {
+                        img:require("../../assets/images/female_list11.webp"),
+                        name:'宝纳斯1985',
+                        price:'49'
+                    },
+                    {
+                        img:require("../../assets/images/female_list12.webp"),
+                        name:'大嘴猴',
+                        price:'71'
+                    }
+                ],
+                color:'rgb(255,229,236)'
+            }
+        },
+        components:{
+            clothing
+        },
+        created() {
+            this.$store.state.showTop = false;
+            this.$store.state.showBottom = false;
+            Object.assign(this.goods,this.$store.state.clothing.nvlist)
+
+        }
+    }
+</script>
+
+<style lang="scss" scoped>
+   
+</style>

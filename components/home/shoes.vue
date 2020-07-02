@@ -1,0 +1,225 @@
+<template>
+    <div>
+        <clothing 
+        :imglist="imglist"
+        :select="select"
+        :navlist="navlist"
+        :goods="goods"
+        :color="color"
+        ></clothing>
+    </div>
+</template>
+
+<script>
+    import clothing from "../public/clothing.vue"
+    export default {
+        data(){
+            return {
+                imglist:[
+                    {
+                        img:require("../../assets/images/shose_bg.webp")
+                    },
+                    {
+                        img:require("../../assets/images/shose_lx1.webp")
+                    },
+                    {
+                        img:require("../../assets/images/shose_lx2.webp")
+                    }
+                ],
+                select:["精选好货","时尚单鞋","专柜同款","运动休闲"],
+                navlist:[
+                    {
+                        img:require("../../assets/images/shose_nav1.webp"),
+                        name:'凉鞋'
+                    },
+                    {
+                        img:require("../../assets/images/shose_nav2.webp"),
+                        name:'低跟'
+                    },
+                    {
+                        img:require("../../assets/images/shose_nav3.webp"),
+                        name:'斜挎包'
+                    },
+                    {
+                        img:require("../../assets/images/shose_nav4.webp"),
+                        name:'运动鞋'
+                    },
+                    {
+                        img:require("../../assets/images/shose_nav5.webp"),
+                        name:'老爹鞋'
+                    },
+                    {
+                        img:require("../../assets/images/shose_nav6.webp"),
+                        name:'男式凉鞋'
+                    },
+                    {
+                        img:require("../../assets/images/shose_nav7.webp"),
+                        name:'手提包'
+                    },
+                    {
+                        img:require("../../assets/images/shose_nav8.webp"),
+                        name:'镂空'
+                    }
+                ],
+                goods:[
+                    {
+                         id:'xiax8',
+                        name:'SD |【价同616】千百度集团品牌SD时尚镂空铆钉女凉鞋',
+                        newPrice:169,
+                        oldPrice:869,
+                        zk:2.0,
+                        brand:'SD',
+                        img:require('../../assets/images/xiax8.webp'),
+                    },
+                    {
+                         id:'shis7',
+                        name:'伊伴|【价同6.16】千百度集团EBLAN伊伴羊皮/羊绒皮异型粗跟凉拖鞋',
+                        newPrice:159,
+                        oldPrice:869,
+                        zk:1.9,
+                        brand:'依伴',
+                        img:require('../../assets/images/shis7.webp')
+                    },
+                    {
+                        id:'dg1',
+                        img:require("../../assets/images/shose_list1.webp"),
+                        name:'新款时尚系带休闲便捷半拖鞋女士百搭校园风休闲鞋帆布鞋',
+                        newPrice:89,
+                        oldPrice:669,
+                        zk:1.4,
+                        brand:'SD',
+                    },
+                    {
+                        id:'dg2',
+                        img:require("../../assets/images/shose_list2.webp"),
+                        name:'2020新款男鞋夏季男板鞋椰子鞋飞织透气网面鞋男休闲运动鞋',
+                        newPrice:169,
+                        oldPrice:899,
+                        zk:1.9,
+                        brand:'SD',
+                    },
+                    {
+                        id:'dg3',
+                        img:require("../../assets/images/shose_list3.webp"),
+                        name:'回力男鞋帆布鞋男国潮复古休闲鞋男运动鞋男低帮鞋男板鞋男潮鞋男',
+                        newPrice:89,
+                        oldPrice:729,
+                        zk:1.3,
+                        brand:'SD'
+                    },
+                    {
+                        id:'dg4',
+                        img:require("../../assets/images/shose_list4.webp"),
+                        name:'2020新款爆款男运动椰子鞋潮流透气运动男休闲鞋350跑步鞋',
+                        newPrice:189,
+                        oldPrice:899,
+                        zk:2.2,
+                        brand:'SD'
+                    },
+                    {
+                        id:'dg5',
+                        img:require("../../assets/images/shose_list5.webp"),
+                        name:'2020新款春夏季男鞋老爹韩版潮流百搭运动休闲跑步潮鞋男士板鞋 ',
+                        newPrice:199,
+                        oldPrice:929,
+                        zk:2.2,
+                    },
+                    {
+                        id:'dg6',
+                        img:require("../../assets/images/shose_list6.webp"),
+                        name:' 2020男鞋夏季透气男士休闲鞋网布鞋透气鞋男士凉鞋',
+                        newPrice:255,
+                        oldPrice:929,
+                        zk:2.8,
+                        brand:'千百度'
+                    },
+                    {
+                        id:'dg7',
+                        img:require("../../assets/images/shose_list7.webp"),
+                        name:'太子龙春季新品男鞋运动休闲透气套脚男士布鞋男士休闲鞋男板鞋',
+                        newPrice:219,
+                        oldPrice:999,
+                         brand:'伊伴',
+                        zk:2.2
+                    },
+                    {
+                        id:'dg8',
+                        img:require("../../assets/images/shose_list8.webp"),
+                        name:' 登山鞋男士厚底夏季新款防滑耐磨网面透气户外徒步鞋户外鞋',
+                        newPrice:189,
+                        oldPrice:1129,
+                        zk:1.7,
+                        brand:'千百度'
+                    },
+                    {
+                        id:'hk1',
+                        img:require("../../assets/images/shose_list9.webp"),
+                        name:'夏季新款椰子鞋男透气帆布鞋男百搭男士休闲鞋轻便男鞋夏布鞋',
+                        newPrice:169,
+                        oldPrice:769,
+                        brand:'千百度',
+                        zk:1.5
+                        
+                    },
+                    {
+                        id:'hk2',
+                        img:require("../../assets/images/shose_list10.webp"),
+                        name:'回力男鞋高帮帆布鞋男复古高帮鞋男休闲鞋男运动鞋男板鞋男潮鞋男 ',
+                        newPrice:189,
+                        oldPrice:829,
+                        zk:2.3,
+                        brand:'伊伴',
+                    },
+                    {
+                        id:'hk3',
+                        img:require("../../assets/images/shose_list11.webp"),
+                        name:'骆驼牌男鞋2020春夏新款网鞋透气网眼缓震轻质一脚蹬休闲运动鞋男',
+                         newPrice:159,
+                        oldPrice:899,
+                         brand:'依伴',
+                        zk:1.8
+                    },
+                    {
+                        id:'hk4',
+                        img:require("../../assets/images/shose_list12.webp"),
+                        name:'新款2020年春季一脚套男士便捷舒适网鞋休闲鞋',
+                        newPrice:159,
+                        oldPrice:899,
+                        zk:1.8,
+                         brand:'伊伴',
+                    },
+                    {
+                        id:'kong6',
+                        name:'伊伴|千百度集团伊伴羊皮素面鱼嘴女式高跟女鞋凉鞋',
+                        newPrice:169,
+                        oldPrice:9299,
+                        zk:1.9,
+                        brand:'伊伴',
+                        img:require('../../assets/images/kong6.webp'),
+                    },
+                    {
+                        id:'shis7',
+                        name:'伊伴|【价同6.16】千百度集团EBLAN伊伴羊皮/羊绒皮异型粗跟凉拖鞋',
+                        newPrice:159,
+                        oldPrice:869,
+                        zk:1.9,
+                        brand:'依伴',
+                        img:require('../../assets/images/shis7.webp'),
+                    }
+                ],
+                color:'rgb(254,245,216)'
+            }
+        },
+        components:{
+            clothing
+        },
+        created() {
+            this.$store.state.showTop = false;
+            this.$store.state.showBottom = false;
+        }
+    }
+</script>
+
+<style lang="scss" scoped>
+   
+</style>
